@@ -1,19 +1,31 @@
+Speeches = new Mongo.Collection('speeches');
+
 if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault("counter", 0);
-
-  Template.hello.helpers({
-    counter: function () {
-      return Session.get("counter");
-    }
-  });
-
-  Template.hello.events({
-    'click button': function () {
-      // increment the counter when button is clicked
-      Session.set("counter", Session.get("counter") + 1);
-    }
-  });
+    
+    Template.speeches.helpers({
+        speeches: function() {
+            return Speeches.find({}, {sort: {votes: -1}}).fetch();
+        }
+    });
+    
+    Template.speeches.events({
+        'click li button': function() {
+            this.votes++;
+            Speeches.update({_id: this._id}, this);
+        },
+        
+        'click form[name=addEntryForm] button': function(event) {
+            var form = $(event.target).parents('form'),
+                title = $('input#title', form),
+                description = $('textarea#description', form);
+            
+            if (title.val() && description.val()) {
+                Speeches.insert({title: title.val(), description: description.val(), votes: 0});
+                title.val('');
+                description.val('');
+            }
+        }
+    });
 }
 
 if (Meteor.isServer) {
