@@ -9,7 +9,7 @@ if (Meteor.isClient) {
     });
     
     Template.speeches.events({
-        'click li button': function() {
+        'click dd button': function() {
             this.votes++;
             Speeches.update({_id: this._id}, this);
         },
