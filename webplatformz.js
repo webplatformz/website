@@ -12,8 +12,10 @@ if (Meteor.isClient) {
         'click dd button': function() {
             this.votes++;
             Speeches.update({_id: this._id}, this);
-        },
-        
+        }
+    });
+    
+    Template.speechForm.events({
         'click form[name=addEntryForm] button': function(event) {
             var form = $(event.target).parents('form'),
                 title = $('input#title', form),
