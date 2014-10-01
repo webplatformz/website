@@ -16,47 +16,41 @@
 
 <template name="speeches">
     <div class="container">
-        <div class="row">
-            <h1>Speeches</h1>
-        </div>
-        <div class="row">
-            <hr />
-            <dl class="dl-horizontal">
-                {{#each speeches}}
-                    <dt><h3>{{title}}</h3></dt>
-                    <dd><h3><small>{{description}}</small> <button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-heart-empty"></span> +{{votes}}</button></h3></dd>
-                {{/each}}
-            </dl>
-            <hr />
-        </div>
+        <h1>Speeches</h1>
+        <hr />
+        <dl class="dl-horizontal">
+            {{#each speeches}}
+                <dt><h3>{{title}}</h3></dt>
+                <dd><h3><small>{{description}}</small> <button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-heart-empty"></span> +{{votes}}</button></h3></dd>
+            {{/each}}
+        </dl>
+        <hr />
     </div>
 </template>
 
 <template name="speechForm">
     <div class="container">
         <div class="row">&nbsp;</div>
-        <div class="row">
-            <form name="addEntryForm" class="form-horizontal" role="form">
-                <div class="form-group">
-                    <label for="title" class="col-sm-2 control-label">Title</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="title" placeholder="Title">
-                    </div>
+        <form name="addEntryForm" class="form-horizontal" role="form">
+            <div class="form-group">
+                <label for="title" class="col-sm-2 control-label">Title</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="title" placeholder="Title">
                 </div>
+            </div>
 
-                <div class="form-group">
-                    <label for="description" class="col-sm-2 control-label">Description</label>
-                    <div class="col-sm-10">
-                        <textarea class="form-control" id="description" placeholder="Description"></textarea>
-                    </div>
+            <div class="form-group">
+                <label for="description" class="col-sm-2 control-label">Description</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" id="description" placeholder="Description"></textarea>
                 </div>
+            </div>
 
-                <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                        <button type="button" class="btn btn-default">Save</button>
-                    </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="button" class="btn btn-default">Save</button>
                 </div>
-            </form>
-        </div>
+            </div>
+        </form>
     </div>
 </template>
