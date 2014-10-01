@@ -1,7 +1,15 @@
-.speeches {
-
+#speeches {
+    background-color: #41b19e;
 }
 
-.speechForm {
-    
+#speeches h3, #speeches h1 {
+    color: white;
+}
+
+#speeches h3 small {
+    color: #ddd;
+}
+
+body {
+    background-color: #f0f4f4;
 }

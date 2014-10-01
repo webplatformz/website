@@ -6,22 +6,25 @@
 </head>
 
 <body>
-    <div class="speeches">
+    <div id="speeches">
         {{> speeches}}
     </div>
-    <div class="speechForm">
+    <div id="speechForm">
         {{ > speechForm }}
     </div>
 </body>
 
 <template name="speeches">
     <div class="container">
-        <div class="row">&nbsp;</div>
         <div class="row">
+            <h1>Speeches</h1>
+        </div>
+        <div class="row">
+            <hr />
             <dl class="dl-horizontal">
                 {{#each speeches}}
                     <dt><h3>{{title}}</h3></dt>
-                    <dd><h3><small>{{description}}</small> <button type="button" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-thumbs-up"></span></button></h3></dd>
+                    <dd><h3><small>{{description}}</small> <button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-thumbs-up"></span> +{{votes}}</button></h3></dd>
                 {{/each}}
             </dl>
             <hr />
