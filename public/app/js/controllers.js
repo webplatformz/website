@@ -2,7 +2,7 @@
 
 /* Controllers */
 
-angular.module('myApp.controllers', [])
+angular.module('webplatformzApp.controllers', [])
     .run(function ($rootScope) {
         /*$rootScope.heroId = 100;
         $rootScope.missionId = 10001;
@@ -10,7 +10,7 @@ angular.module('myApp.controllers', [])
         $rootScope.pagereload = true;*/
     })
 
-.controller('HomeCtrl', function ($scope, $rootScope) {
+.controller('homeCtrl', function ($scope, $rootScope) {
         $scope.init = function () {
             // Nothing here for now
         }

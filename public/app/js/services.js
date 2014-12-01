@@ -3,9 +3,8 @@
 /* Services */
 
 
-
 // Demonstrate how to register services
-angular.module('myApp.services', []).factory('webplatformzAPIService', function ($resource) {
+angular.module('webplatformzApp.services', []).factory('webplatformzAPIService', function ($resource) {
 
     var webplatformzAPI = {};
 
@@ -21,6 +20,6 @@ angular.module('myApp.services', []).factory('webplatformzAPIService', function 
         return {"missionId": missionId, "heroId": heroId};
     };
     */
-    
+
     return webplatformzAPI;
 });

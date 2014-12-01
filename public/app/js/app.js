@@ -2,13 +2,13 @@
 
 
 // Declare app level module which depends on filters, and services
-angular.module('myApp', [
+angular.module('webplatformzApp', [
     'ngRoute',
     'ngResource',
-    'myApp.filters',
-    'myApp.services',
-    'myApp.directives',
-    'myApp.controllers'
+ //    'webplatformzApp.filters',
+ //    'webplatformzApp.services',
+    'webplatformzApp.directives',
+    'webplatformzApp.controllers'
 ]).
 config(['$routeProvider',
     function ($routeProvider) {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp" class="no-js">
+<html lang="en" ng-app="webplatformzApp" class="no-js">
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +7,10 @@
     <title>zoin</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/webplatformz.css">
-    <script src="http://modernizr.com/downloads/modernizr-latest.js"></script>
+    <!--    <script src="http://modernizr.com/downloads/modernizr-latest.js"></script>-->
 </head>
 
 <body>
@@ -19,22 +19,22 @@
 
 
 
+
     <script src="js/libs/angular.min.js"></script>
     <script src="js/libs/angular-route.js"></script>
     <script src="js/libs/angular-loader.js"></script>
     <script src="js/libs/angular-resource.min.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/services.js"></script>
     <script src="js/controllers.js"></script>
-    <script src="js/filters.js"></script>
+    <!--
+    <script src="js/services.js"></script>
+    <script src="js/filters.js"></script>-->
     <script src="js/directives.js"></script>
     <script src="js/libs/jquery.min.js"></script>
-    <script src="js/libs/bootstrap.min.js"></script>
-    <script src="js/libs/owl-carousel/owl.carousel.js"></script>
-
-    <link href="js/libs/owl-carousel/owl.carousel.css" rel="stylesheet" />
-    <link href="js/libs/owl-carousel/owl.theme.css" rel="stylesheet" />
-
+    <script src="js/libs/foundation.min.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
 </body>
 
 </html>
