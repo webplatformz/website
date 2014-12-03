@@ -1,0 +1,19 @@
+{
+  "name": "webplatformz.ch AngularJS App",
+  "version": "0.0.1",
+  "authors": [
+  ],
+  "description": "webplatformz.ch AngularJS App",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ],
+  "dependencies": {
+    "angular": "~1.2.25"
+  }
+}
