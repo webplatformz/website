@@ -3,7 +3,7 @@
 /* Services */
 
 
-// Demonstrate how to register services
+// Register services
 angular.module('webplatformzApp.services', []).factory('webplatformzAPIService', function ($resource) {
 
     var webplatformzAPI = {};
