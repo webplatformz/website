@@ -20,6 +20,10 @@ config(['$routeProvider',
             templateUrl: 'partials/topics.html',
             controller: 'topicsCtrl'
         });
+        $routeProvider.when('/topics/shadowdom', {
+            templateUrl: 'partials/topics/shadowdom.html',
+            controller: 'topicsCtrl'
+        });
         $routeProvider.otherwise({
             redirectTo: '/home'
         });
