@@ -1,9 +1,14 @@
 var gulp = require('gulp');
+var del = require('del');
 var eslint = require('gulp-eslint');
 
 var paths = {
   ourJsFiles: ['app/**/*.js', 'test/**/*.js', '!app/lib/**/*', '!app/js/libs/**/*.js']
 };
+
+gulp.task('clean:all', function (cb) {
+    del(['node_modules/*', 'app/lib'], cb);
+});
 
 gulp.task('lint', function () {
     // Note: To have the process exit with an error code (1) on
